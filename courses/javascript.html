@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cours JavaScript sur LearnHub.">
+    <title>LearnHub - Cours JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="logo" href="../index.html">LearnHub</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true"
+            ><span></span><span></span><span></span
+          ></span>
+        </button>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../index.html#cours">Cours</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="course-page">
+      <div class="container">
+        <header class="course-header">
+          <p class="eyebrow">Parcours interactif</p>
+          <h1 id="page-title">Cours JavaScript</h1>
+          <p>
+            Découvrez les bases de la programmation et rendez vos pages web
+            interactives.
+          </p>
+          <div class="progress-label">
+            <span>Progression globale</span><strong>0%</strong>
+          </div>
+          <div
+            class="progress progress-global"
+            role="progressbar"
+            aria-label="Progression globale du cours JavaScript"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span></span>
+          </div>
+        </header>
+
+        <div class="course-layout">
+          <aside class="module-sidebar" aria-label="Plan du cours">
+            <details open>
+              <summary>Modules du cours <span>6 modules</span></summary>
+              <nav aria-label="Navigation des modules">
+                <ol class="module-list">
+                  <li>
+                    <a href="#module-1"
+                      ><span class="module-badge">01</span
+                      ><span class="module-title">Variables et types</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-2"
+                      ><span class="module-badge">02</span
+                      ><span class="module-title"
+                        >Conditions et opérateurs</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-3"
+                      ><span class="module-badge">03</span
+                      ><span class="module-title">Boucles et tableaux</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-4"
+                      ><span class="module-badge">04</span
+                      ><span class="module-title">Fonctions</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-5"
+                      ><span class="module-badge">05</span
+                      ><span class="module-title">DOM et événements</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-6"
+                      ><span class="module-badge">06</span
+                      ><span class="module-title"
+                        >Formulaires et validation</span
+                      ></a
+                    >
+                  </li>
+                </ol>
+              </nav>
+            </details>
+          </aside>
+
+          <section class="modules-content" aria-label="Contenu des modules">
+            <article class="lesson card" id="module-1">
+              <p class="lesson-number">Module 01</p>
+              <h2>Variables et types de données</h2>
+              <p>
+                Une variable donne un nom à une valeur utilisée par le
+                programme. Utilisez <code>const</code> lorsque la référence ne
+                change pas et <code>let</code> lorsqu'elle doit être réaffectée.
+                JavaScript manipule notamment des chaînes, des nombres et des
+                booléens.
+              </p>
+              <img
+                src="../images/js-variables.svg"
+                alt="Exemple de variables JavaScript contenant un nom et un âge">
+              <pre><code>const prenom = "Amina";
+let age = 21;
+const estEtudiante = true;
+
+console.log(`${prenom} a ${age} ans.`);</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/W6NZfCO5SIk"
+                title="Vidéo sur les variables JavaScript"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-2"
+                  >Suivant : Conditions et opérateurs →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-2">
+              <p class="lesson-number">Module 02</p>
+              <h2>Conditions et opérateurs</h2>
+              <p>
+                Les conditions permettent d'exécuter un bloc uniquement
+                lorsqu'une expression est vraie. Les opérateurs de comparaison
+                et les opérateurs logiques aident à combiner plusieurs règles
+                pour représenter le comportement attendu.
+              </p>
+              <img
+                src="../images/js-conditions.svg"
+                alt="Organigramme représentant une condition si sinon en JavaScript">
+              <pre><code>const note = 15;
+
+if (note >= 10) {
+  console.log("Module validé");
+} else {
+  console.log("À revoir");
+}</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/IsG4Xd6LlsM"
+                title="Vidéo sur les conditions JavaScript"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-1">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-3"
+                  >Suivant : Boucles et tableaux →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-3">
+              <p class="lesson-number">Module 03</p>
+              <h2>Boucles et tableaux</h2>
+              <p>
+                Les tableaux regroupent plusieurs valeurs dans une même
+                collection. Une boucle parcourt ces valeurs sans répéter
+                manuellement le même code. La méthode <code>forEach</code> est
+                particulièrement pratique pour traiter chaque élément.
+              </p>
+              <img
+                src="../images/js-boucles-tableaux.svg"
+                alt="Tableau de données parcouru par une boucle JavaScript">
+              <pre><code>const matieres = ["HTML", "CSS", "JavaScript"];
+
+matieres.forEach((matiere, index) =&gt; {
+  console.log(`${index + 1}. ${matiere}`);
+});</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/Kn06785iWLk"
+                title="Vidéo sur les boucles et tableaux JavaScript"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-2">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-4">Suivant : Fonctions →</a>
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-4">
+              <p class="lesson-number">Module 04</p>
+              <h2>Créer et utiliser des fonctions</h2>
+              <p>
+                Une fonction regroupe des instructions réutilisables. Elle peut
+                recevoir des paramètres et retourner un résultat. Découper un
+                programme en petites fonctions rend le code plus lisible et plus
+                simple à tester.
+              </p>
+              <img
+                src="../images/js-fonctions.svg"
+                alt="Fonction JavaScript qui calcule un total à partir de deux valeurs">
+              <pre><code>function calculerTotal(prix, quantite) {
+  return prix * quantite;
+}
+
+const total = calculerTotal(12, 3);
+console.log(total); // 36</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/N8ap4k_1QEQ"
+                title="Vidéo sur les fonctions JavaScript"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-3">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-5"
+                  >Suivant : DOM et événements →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-5">
+              <p class="lesson-number">Module 05</p>
+              <h2>Manipuler le DOM et écouter les événements</h2>
+              <p>
+                Le DOM représente la page HTML sous forme d'objets. JavaScript
+                peut sélectionner un élément, modifier son contenu et réagir à
+                une action de l'utilisateur avec <code>addEventListener</code>,
+                comme un clic sur un bouton.
+              </p>
+              <img
+                src="../images/js-dom-evenements.svg"
+                alt="Bouton de page modifié par JavaScript après un clic">
+              <pre><code>const bouton = document.querySelector("#saluer");
+
+bouton.addEventListener("click", () =&gt; {
+  document.querySelector("#message").textContent =
+    "Bonjour et bienvenue !";
+});</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/5fb2aPlgoys"
+                title="Vidéo sur le DOM et les événements JavaScript"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-4">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-6"
+                  >Suivant : Formulaires et validation →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-6">
+              <p class="lesson-number">Module 06</p>
+              <h2>Formulaires et validation</h2>
+              <p>
+                JavaScript complète la validation native des formulaires en
+                vérifiant les données avant leur envoi. Écoutez l'événement
+                <code>submit</code>, empêchez l'envoi si nécessaire et affichez
+                un message compréhensible à l'utilisateur.
+              </p>
+              <img
+                src="../images/js-validation-formulaire.svg"
+                alt="Formulaire affichant un message de validation JavaScript">
+              <pre><code>form.addEventListener("submit", (event) =&gt; {
+  if (email.value.trim() === "") {
+    event.preventDefault();
+    message.textContent = "Saisissez votre e-mail.";
+  }
+});</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/rsd4FNGTRBw"
+                title="Vidéo sur la validation des formulaires JavaScript"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-5">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="../index.html#cours"
+                  >Retour aux cours →</a
+                >
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <p>&copy; 2026 LearnHub. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cours HTML5 sur LearnHub.">
+    <title>LearnHub - Cours HTML5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="logo" href="../index.html">LearnHub</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true"
+            ><span></span><span></span><span></span
+          ></span>
+        </button>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../index.html#cours">Cours</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="course-page">
+      <div class="container">
+        <header class="course-header">
+          <p class="eyebrow">Parcours débutant</p>
+          <h1 id="page-title">Cours HTML5</h1>
+          <p>
+            Apprenez à créer des pages web structurées, accessibles et
+            sémantiques.
+          </p>
+          <div class="progress-label">
+            <span>Progression globale</span><strong>0%</strong>
+          </div>
+          <div
+            class="progress progress-global"
+            role="progressbar"
+            aria-label="Progression globale du cours HTML5"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span></span>
+          </div>
+        </header>
+
+        <div class="course-layout">
+          <aside class="module-sidebar" aria-label="Plan du cours">
+            <details open>
+              <summary>Modules du cours <span>6 modules</span></summary>
+              <nav aria-label="Navigation des modules">
+                <ol class="module-list">
+                  <li>
+                    <a href="#module-1"
+                      ><span class="module-badge">01</span
+                      ><span class="module-title">Structure d'une page</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-2"
+                      ><span class="module-badge">02</span
+                      ><span class="module-title"
+                        >Titres et paragraphes</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-3"
+                      ><span class="module-badge">03</span
+                      ><span class="module-title">Liens et images</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-4"
+                      ><span class="module-badge">04</span
+                      ><span class="module-title">Listes et tableaux</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-5"
+                      ><span class="module-badge">05</span
+                      ><span class="module-title">Formulaires</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-6"
+                      ><span class="module-badge">06</span
+                      ><span class="module-title">HTML sémantique</span></a
+                    >
+                  </li>
+                </ol>
+              </nav>
+            </details>
+          </aside>
+
+          <section class="modules-content" aria-label="Contenu des modules">
+            <article class="lesson card" id="module-1">
+              <p class="lesson-number">Module 01</p>
+              <h2>Structure d'une page HTML</h2>
+              <p>
+                Un document HTML commence par une déclaration de type, puis
+                contient les éléments <code>html</code>, <code>head</code> et
+                <code>body</code>. Cette structure permet au navigateur de
+                comprendre le document et de présenter son contenu correctement.
+              </p>
+              <img
+                src="../images/html-structure.svg"
+                alt="Schéma illustrant la structure head et body d'un document HTML">
+              <pre><code>&lt;!doctype html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ma première page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bienvenue&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/qz0aGYrrlhU"
+                title="Vidéo sur la structure d'un document HTML"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-2"
+                  >Suivant : Titres et paragraphes →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-2">
+              <p class="lesson-number">Module 02</p>
+              <h2>Titres et paragraphes</h2>
+              <p>
+                Les titres de <code>h1</code> à <code>h6</code> organisent la
+                hiérarchie du contenu. Utilisez un seul titre principal par
+                page, puis descendez progressivement dans les niveaux. Les
+                balises <code>p</code> servent à découper le texte en
+                paragraphes lisibles.
+              </p>
+              <img
+                src="../images/html-titres-paragraphes.svg"
+                alt="Exemple visuel de titres HTML organisés en plusieurs niveaux">
+              <pre><code>&lt;h1&gt;Le jardinage urbain&lt;/h1&gt;
+&lt;h2&gt;Choisir ses plantes&lt;/h2&gt;
+&lt;p&gt;Les herbes aromatiques poussent facilement
+sur un balcon bien exposé.&lt;/p&gt;
+              </code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/UB1O30fR-EE"
+                title="Vidéo sur les titres et paragraphes HTML"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-1">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-3"
+                  >Suivant : Liens et images →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-3">
+              <p class="lesson-number">Module 03</p>
+              <h2>Liens et images</h2>
+              <p>
+                La balise <code>a</code> relie les pages entre elles grâce à son
+                attribut <code>href</code>. La balise <code>img</code> affiche
+                une image et doit toujours posséder un attribut
+                <code>alt</code> descriptif afin de rester accessible aux
+                personnes qui utilisent un lecteur d'écran.
+              </p>
+              <img
+                src="../images/html-liens-images.svg"
+                alt="Illustration d'une page contenant un lien et une image accessible">
+              <pre><code>&lt;a href="contact.html"&gt;Nous contacter&lt;/a&gt;
+
+&lt;img src="images/logo.png"
+     alt="Logo de LearnHub"&gt;</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/kUMe1FH4CHE"
+                title="Vidéo sur les liens et les images en HTML"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-2">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-4"
+                  >Suivant : Listes et tableaux →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-4">
+              <p class="lesson-number">Module 04</p>
+              <h2>Listes et tableaux</h2>
+              <p>
+                Les listes non ordonnées présentent des éléments sans
+                classement, tandis que les listes ordonnées indiquent une
+                séquence. Les tableaux sont réservés aux données tabulaires et
+                doivent utiliser des en-têtes pour faciliter leur compréhension.
+              </p>
+              <img
+                src="../images/html-listes-tableaux.svg"
+                alt="Exemple de liste et de tableau HTML organisés">
+              <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Cours&lt;/th&gt;&lt;th&gt;Niveau&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;HTML&lt;/td&gt;&lt;td&gt;Débutant&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/PlxWf493en4"
+                title="Vidéo sur les listes et tableaux HTML"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-3">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-5"
+                  >Suivant : Formulaires →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-5">
+              <p class="lesson-number">Module 05</p>
+              <h2>Créer des formulaires</h2>
+              <p>
+                Les formulaires recueillent les informations saisies par les
+                visiteurs. Chaque champ doit être associé à une étiquette
+                <code>label</code>, et son type doit refléter la donnée attendue
+                pour améliorer l'accessibilité et l'expérience sur mobile.
+              </p>
+              <img
+                src="../images/html-formulaires.svg"
+                alt="Maquette d'un formulaire HTML avec des champs étiquetés">
+              <pre><code>&lt;form action="/inscription" method="post"&gt;
+  &lt;label for="email"&gt;Votre adresse e-mail&lt;/label&gt;
+  &lt;input id="email" type="email" name="email" required&gt;
+  &lt;button type="submit"&gt;S'inscrire&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/fNcJuPIZ2WE"
+                title="Vidéo sur la création de formulaires HTML"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-4">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-6"
+                  >Suivant : HTML sémantique →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-6">
+              <p class="lesson-number">Module 06</p>
+              <h2>Adopter le HTML sémantique</h2>
+              <p>
+                Les éléments sémantiques décrivent le rôle du contenu :
+                <code>header</code>, <code>nav</code>, <code>main</code>,
+                <code>section</code>, <code>article</code> et
+                <code>footer</code>. Ils rendent la page plus claire pour les
+                développeurs, les moteurs de recherche et les technologies
+                d'assistance.
+              </p>
+              <img
+                src="../images/html-semantique.svg"
+                alt="Schéma d'une page organisée avec des éléments HTML sémantiques">
+              <pre><code>&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Actualités du campus&lt;/h1&gt;
+    &lt;p&gt;Découvrez les prochains événements.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/OU6e6H0o4sY"
+                title="Vidéo sur le HTML sémantique"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-5">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="../index.html#cours"
+                  >Retour aux cours →</a
+                >
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <p>&copy; 2026 LearnHub. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

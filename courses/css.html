@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cours CSS3 sur LearnHub.">
+    <title>LearnHub - Cours CSS3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="logo" href="../index.html">LearnHub</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true"
+            ><span></span><span></span><span></span
+          ></span>
+        </button>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../index.html#cours">Cours</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="course-page">
+      <div class="container">
+        <header class="course-header">
+          <p class="eyebrow">Parcours créatif</p>
+          <h1 id="page-title">Cours CSS3</h1>
+          <p>
+            Apprenez à mettre en forme des interfaces modernes, lisibles et
+            responsives.
+          </p>
+          <div class="progress-label">
+            <span>Progression globale</span><strong>0%</strong>
+          </div>
+          <div
+            class="progress progress-global"
+            role="progressbar"
+            aria-label="Progression globale du cours CSS3"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span></span>
+          </div>
+        </header>
+
+        <div class="course-layout">
+          <aside class="module-sidebar" aria-label="Plan du cours">
+            <details open>
+              <summary>Modules du cours <span>6 modules</span></summary>
+              <nav aria-label="Navigation des modules">
+                <ol class="module-list">
+                  <li>
+                    <a href="#module-1"
+                      ><span class="module-badge">01</span
+                      ><span class="module-title"
+                        >Sélecteurs et propriétés</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-2"
+                      ><span class="module-badge">02</span
+                      ><span class="module-title"
+                        >Couleurs et typographie</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-3"
+                      ><span class="module-badge">03</span
+                      ><span class="module-title">Boîte et espacements</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-4"
+                      ><span class="module-badge">04</span
+                      ><span class="module-title">Flexbox</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-5"
+                      ><span class="module-badge">05</span
+                      ><span class="module-title">Grid et responsive</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#module-6"
+                      ><span class="module-badge">06</span
+                      ><span class="module-title"
+                        >Transitions et variables</span
+                      ></a
+                    >
+                  </li>
+                </ol>
+              </nav>
+            </details>
+          </aside>
+
+          <section class="modules-content" aria-label="Contenu des modules">
+            <article class="lesson card" id="module-1">
+              <p class="lesson-number">Module 01</p>
+              <h2>Sélecteurs et propriétés</h2>
+              <p>
+                CSS associe des règles de présentation aux éléments HTML. Un
+                sélecteur cible un élément, puis les déclarations entre
+                accolades définissent son apparence, comme sa couleur, sa taille
+                ou son alignement.
+              </p>
+              <img
+                src="../images/css-selecteurs.svg"
+                alt="Exemple de sélecteurs CSS appliqués à des éléments HTML">
+              <pre><code>h1 {
+  color: #1d4ed8;
+  font-size: 2rem;
+}
+
+.introduction {
+  max-width: 40rem;
+}</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/1PnVor36_40"
+                title="Vidéo sur les sélecteurs et propriétés CSS"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-2"
+                  >Suivant : Couleurs et typographie →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-2">
+              <p class="lesson-number">Module 02</p>
+              <h2>Couleurs et typographie</h2>
+              <p>
+                Une palette cohérente et une typographie bien choisie rendent
+                une interface plus agréable. CSS accepte notamment les couleurs
+                hexadécimales, RGB et HSL, ainsi que des familles de polices de
+                secours.
+              </p>
+              <img
+                src="../images/css-couleurs-typographie.svg"
+                alt="Palette de couleurs et exemples de typographie pour une interface web">
+              <pre><code>body {
+  color: #172033;
+  background-color: #f4f7fb;
+  font-family: "Inter", sans-serif;
+}
+
+.accent {
+  color: hsl(221 83% 53%);
+}</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/1Rs2ND1ryYc"
+                title="Vidéo sur les couleurs et la typographie CSS"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-1">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-3"
+                  >Suivant : Boîte et espacements →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-3">
+              <p class="lesson-number">Module 03</p>
+              <h2>Le modèle de boîte et les espacements</h2>
+              <p>
+                Chaque élément est une boîte composée du contenu, du padding, de
+                la bordure et de la marge. La propriété
+                <code>box-sizing</code> aide à conserver des dimensions
+                prévisibles lorsque l'on ajoute du padding et des bordures.
+              </p>
+              <img
+                src="../images/css-modele-de-boite.svg"
+                alt="Schéma des zones contenu, padding, bordure et marge en CSS">
+              <pre><code>* {
+  box-sizing: border-box;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #dbe3ef;
+}</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/rIO5326FgPE"
+                title="Vidéo sur le modèle de boîte CSS"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-2">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-4">Suivant : Flexbox →</a>
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-4">
+              <p class="lesson-number">Module 04</p>
+              <h2>Organiser une interface avec Flexbox</h2>
+              <p>
+                Flexbox facilite l'alignement d'éléments sur un axe principal.
+                Avec <code>display: flex</code>, on peut contrôler la direction,
+                l'espacement et l'alignement d'une barre de navigation ou d'un
+                groupe de cartes.
+              </p>
+              <img
+                src="../images/css-flexbox.svg"
+                alt="Éléments alignés horizontalement avec CSS Flexbox">
+              <pre><code>.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/fYq5PXgSsbE"
+                title="Vidéo sur CSS Flexbox"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-3">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-5"
+                  >Suivant : Grid et responsive →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-5">
+              <p class="lesson-number">Module 05</p>
+              <h2>Grid et design responsive</h2>
+              <p>
+                CSS Grid crée des mises en page en lignes et en colonnes.
+                Associé aux media queries, il permet d'adapter une grille au
+                mobile, à la tablette et au grand écran sans dupliquer le HTML.
+              </p>
+              <img
+                src="../images/css-grid-responsive.svg"
+                alt="Grille de cartes qui s'adapte à plusieurs tailles d'écran">
+              <pre><code>.course-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .course-grid { grid-template-columns: repeat(2, 1fr); }
+}</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/9zBsdzdE4sM"
+                title="Vidéo sur CSS Grid et le responsive design"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-4">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="#module-6"
+                  >Suivant : Transitions et variables →</a
+                >
+              </div>
+            </article>
+
+            <article class="lesson card" id="module-6">
+              <p class="lesson-number">Module 06</p>
+              <h2>Transitions et variables CSS</h2>
+              <p>
+                Les variables CSS centralisent les valeurs réutilisées comme les
+                couleurs et les espacements. Les transitions ajoutent une
+                évolution douce lorsqu'un élément change d'état, par exemple au
+                survol d'un bouton.
+              </p>
+              <img
+                src="../images/css-variables-transitions.svg"
+                alt="Bouton illustrant une transition CSS et une palette de variables">
+              <pre><code>:root {
+  --couleur-principale: #2563eb;
+}
+
+.button {
+  background: var(--couleur-principale);
+  transition: transform 150ms ease;
+}
+
+.button:hover { transform: translateY(-2px); }</code></pre>
+              <iframe
+                src="https://www.youtube.com/embed/Nloq6uzF8RQ"
+                title="Vidéo sur les transitions et variables CSS"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+              <div class="lesson-actions">
+                <a class="previous-link" href="#module-5">← Précédent</a
+                ><button class="button" type="button">
+                  Marquer comme terminé</button
+                ><a class="next-link" href="../index.html#cours"
+                  >Retour aux cours →</a
+                >
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <p>&copy; 2026 LearnHub. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>
