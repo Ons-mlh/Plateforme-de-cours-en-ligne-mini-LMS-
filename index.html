@@ -1,253 +1,77 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="LearnHub, votre plateforme de cours en ligne.">
+      content="LearnHub, votre plateforme de cours en ligne (mini LMS)."
+    />
     <title>LearnHub - Accueil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/lms.css" />
+    <!-- Scripts classiques, dans l'ordre de dépendance (pas de bibliothèque externe) -->
+    <script src="js/data.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/store.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+    <script src="js/player.js" defer></script>
+    <script src="js/admin.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#app">Aller au contenu</a>
     <header class="site-header">
       <div class="container header-content">
-        <a class="logo" href="index.html">LearnHub</a>
+        <a class="logo" href="#/">LearnHub</a>
         <button
           class="menu-toggle"
           type="button"
           aria-label="Ouvrir le menu"
           aria-expanded="false"
+          aria-controls="site-nav"
         >
           <span class="menu-icon" aria-hidden="true"
             ><span></span><span></span><span></span
           ></span>
         </button>
-        <nav class="site-nav" aria-label="Navigation principale">
+        <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
           <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="index.html#cours">Cours</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#/" data-route="home">Accueil</a></li>
+            <li><a href="#/cours" data-route="cours">Cours</a></li>
+            <li><a href="#/admin" data-route="admin">Administration</a></li>
+            <li><a href="#/contact" data-route="contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero" aria-labelledby="page-title">
-        <div class="container hero-content">
-          <p class="eyebrow">Votre apprentissage, votre rythme</p>
-          <h1 id="page-title">
-            Développez vos compétences numériques avec LearnHub
-          </h1>
-          <p class="hero-description">
-            Apprenez les technologies du web grâce à des cours clairs,
-            progressifs et accessibles à tous.
-          </p>
-          <a class="button" href="#cours">Commencer</a>
-        </div>
-      </section>
-
-      <section
-        class="courses-section container"
-        id="cours"
-        aria-labelledby="courses-title"
+    <!-- Le contenu de chaque vue est injecté ici par js/main.js (SPA) -->
+    <main id="app" tabindex="-1">
+      <noscript
+        ><p class="container">
+          JavaScript est nécessaire pour utiliser LearnHub.
+        </p></noscript
       >
-        <div class="section-heading">
-          <p class="eyebrow">Apprendre en pratique</p>
-          <h2 id="courses-title">Nos cours</h2>
-          <p>
-            Choisissez un parcours et avancez étape par étape vers vos
-            objectifs.
-          </p>
-        </div>
-
-        <div class="course-grid">
-          <article class="course-card card" data-total="6">
-            <div
-              class="course-image"
-              role="img"
-              aria-label="Illustration du cours HTML5"
-            >
-              HTML
-            </div>
-            <div class="course-card-content">
-              <h3>Les bases du HTML5</h3>
-              <p>
-                Construisez des pages web structurées avec un HTML moderne et
-                sémantique.
-              </p>
-              <dl class="course-details">
-                <div>
-                  <dt>Modules</dt>
-                  <dd>6 modules</dd>
-                </div>
-                <div>
-                  <dt>Niveau</dt>
-                  <dd>Débutant</dd>
-                </div>
-              </dl>
-              <div class="progress-label">
-                <span>Progression</span><strong>0%</strong>
-              </div>
-              <div
-                class="progress"
-                role="progressbar"
-                aria-label="Progression du cours HTML5"
-                aria-valuenow="0"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <span></span>
-              </div>
-              <a class="course-link" href="courses/html.html"
-                >Voir le cours <span aria-hidden="true">→</span></a
-              >
-            </div>
-          </article>
-
-          <article class="course-card card" data-total="6">
-            <div
-              class="course-image"
-              role="img"
-              aria-label="Illustration du cours CSS3"
-            >
-              CSS
-            </div>
-            <div class="course-card-content">
-              <h3>Maîtriser le CSS3</h3>
-              <p>
-                Donnez vie à vos interfaces avec des mises en page élégantes et
-                responsives.
-              </p>
-              <dl class="course-details">
-                <div>
-                  <dt>Modules</dt>
-                  <dd>6 modules</dd>
-                </div>
-                <div>
-                  <dt>Niveau</dt>
-                  <dd>Intermédiaire</dd>
-                </div>
-              </dl>
-              <div class="progress-label">
-                <span>Progression</span><strong>0%</strong>
-              </div>
-              <div
-                class="progress"
-                role="progressbar"
-                aria-label="Progression du cours CSS3"
-                aria-valuenow="0"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <span></span>
-              </div>
-              <a class="course-link" href="courses/css.html"
-                >Voir le cours <span aria-hidden="true">→</span></a
-              >
-            </div>
-          </article>
-
-          <article class="course-card card" data-total="6">
-            <div
-              class="course-image"
-              role="img"
-              aria-label="Illustration du cours JavaScript"
-            >
-              JS
-            </div>
-            <div class="course-card-content">
-              <h3>Découvrir JavaScript</h3>
-              <p>
-                Rendez vos pages interactives et créez vos premières
-                fonctionnalités dynamiques.
-              </p>
-              <dl class="course-details">
-                <div>
-                  <dt>Modules</dt>
-                  <dd>6 modules</dd>
-                </div>
-                <div>
-                  <dt>Niveau</dt>
-                  <dd>Intermédiaire</dd>
-                </div>
-              </dl>
-              <div class="progress-label">
-                <span>Progression</span><strong>0%</strong>
-              </div>
-              <div
-                class="progress"
-                role="progressbar"
-                aria-label="Progression du cours JavaScript"
-                aria-valuenow="0"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <span></span>
-              </div>
-              <a class="course-link" href="courses/javascript.html"
-                >Voir le cours <span aria-hidden="true">→</span></a
-              >
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="why-section container" aria-labelledby="why-title">
-        <div class="section-heading">
-          <p class="eyebrow">Une méthode simple</p>
-          <h2 id="why-title">Pourquoi LearnHub ?</h2>
-        </div>
-        <div class="features-grid">
-          <article class="feature">
-            <span class="feature-icon" aria-hidden="true">01</span>
-            <h3>Apprenez à votre rythme</h3>
-            <p>
-              Accédez aux leçons quand vous le souhaitez et progressez sans
-              pression.
-            </p>
-          </article>
-          <article class="feature">
-            <span class="feature-icon" aria-hidden="true">02</span>
-            <h3>Des contenus pratiques</h3>
-            <p>
-              Consolidez vos connaissances avec des notions concrètes et
-              directement utiles.
-            </p>
-          </article>
-          <article class="feature">
-            <span class="feature-icon" aria-hidden="true">03</span>
-            <h3>Suivez vos progrès</h3>
-            <p>
-              Visualisez votre avancement et gardez la motivation tout au long
-              du parcours.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="cta-section container" aria-labelledby="cta-title">
-        <div class="cta-content">
-          <h2 id="cta-title">Prêt à commencer votre parcours ?</h2>
-          <p>
-            Faites le premier pas et développez une nouvelle compétence dès
-            aujourd'hui.
-          </p>
-          <a class="button button-light" href="#cours">Explorer les cours</a>
-        </div>
-      </section>
     </main>
+    <p
+      class="visually-hidden"
+      id="announcer"
+      role="status"
+      aria-live="polite"
+    ></p>
 
     <footer class="site-footer" id="contact">
       <div class="container">
-        <p>&copy; 2026 LearnHub. Tous droits réservés.</p>
+        <p>
+          &copy; 2026 LearnHub. Tous droits réservés. · contact@learnhub.example
+        </p>
       </div>
     </footer>
   </body>
